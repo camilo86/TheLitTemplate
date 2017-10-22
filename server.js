@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
 
+// server settings
+app.set('view engine', 'pug');
+
 app.get('/', function(req, res) {
-  return res.json({
-    message: 'Hello World!'
-  });
+  res.render('index', { title: 'It\'s lit!', message: 'Welcome aboard. Time to hack some node.js 😎' })
 })
 
 var listener = app.listen(process.env.PORT || 3000, function() {
