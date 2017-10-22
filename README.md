@@ -13,3 +13,7 @@ Sometimes we just want to create fast Node.Js applications to solve basic proble
 2. Navigate inside the template folder (for example `cd TheLitTemplate`)
 
 3. Start the server `npm start`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
