@@ -15,7 +15,7 @@ accountSchema.pre('save', function(next) {
     next();
   }
 
-  bcrypt.hash(account.password, function(error, hash) {
+  bcrypt.hash(account.password, 10, function(error, hash) {
     if(error) {
       return next(error);
     }
