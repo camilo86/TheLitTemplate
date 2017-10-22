@@ -1,11 +1,15 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
 // server settings
 app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-  res.render('index', { title: 'It\'s lit!', message: 'Welcome aboard. Time to hack some node.js 😎' })
+  res.render('index', {
+    title: 'It\'s lit!',
+    message: 'Welcome aboard. Time to hack some node.js 😎' })
 })
 
 // routers
